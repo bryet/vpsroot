@@ -146,7 +146,6 @@ main(){
     sed -i -E "0,/^[[:space:]]*#?[[:space:]]*Port[[:space:]]/s/^[[:space:]]*#?[[:space:]]*Port.*/Port ${sshport}/" /etc/ssh/sshd_config
     sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config
     sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-    sed -i 's/^#\?RSAAuthentication.*/RSAAuthentication yes/g' /etc/ssh/sshd_config
     sed -i 's/^#\?PubkeyAuthentication.*/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
     rm -rf /etc/ssh/sshd_config.d/* /etc/ssh/ssh_config.d/*
 
